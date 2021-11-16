@@ -1,0 +1,58 @@
+%%money change
+Import java.util.*;
+public class Main
+{
+static void moneyChange(int x)
+{
+int[] deno = { 1, 5, 10 }; 
+int n = deno.length;
+ List<Integer> list = new ArrayList();
+for(inti=n-1;i>=0;i--)
+ {
+while (x >= deno[i])
+ {
+ x -= deno[i];
+list.add(deno[i]);
+ }
+ }
+System.out.println("Number of minimum coins is: " + list.size());
+for(inti=0;i<list.size();i++)
+System.out.print(list.get(i)+" ");
+ }
+public static void main(String args[]) 
+ {
+moneyChange(28);
+ }
+}
+
+
+%%MAX ADVERTISNMENT REV:
+importjava.util.Collection;
+importjava.util.Collections;
+importjava.util.Random;
+importjava.util.Scanner;
+public class randomAd {
+public static void main(String[] args) {
+int s=0;
+ Scanner in=new Scanner(System.in);
+System.out.println("Size of the array");
+int n=in.nextInt();
+ Integer [] a= new Integer[n];
+ Integer [] b= new Integer[n];
+ Random rd=new Random();
+System.out.println("Enter the profits per click");
+for(inti=0;i<n;i++)
+a[i]=in.nextInt();
+for(inti=0;i<n;i++)
+b[i]=rd.nextInt();
+System.out.println("Average no.of clicks per day");
+for(inti=0;i<n;i++)
+System.out.print(b[i]+" ");
+Arrays.sort(a,Collections.reverseOrder());
+Arrays.sort(b,Collections.reverseOrder());
+for(inti=0;i<n;i++){
+ s=s+a[i]*b[i];
+ }
+System.out.println("Maximum: "+s);
+ }
+}
